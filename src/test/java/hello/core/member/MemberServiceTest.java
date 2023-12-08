@@ -23,9 +23,10 @@ public class MemberServiceTest {
         Member member = new Member(1L, "memberA", Grade.VIP);
 
         //when
-       Member findMember = memberService.findMember(1L);
+        Member findMember = memberService.findMember(1L);
         memberService.join(member);
-
+        System.out.println("member = " + member);
+        System.out.println("findMember = " + findMember);
         //then
         Assertions.assertThat(member).isEqualTo(findMember);
     }
